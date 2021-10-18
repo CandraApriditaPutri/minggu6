@@ -59,7 +59,11 @@
                             @endif
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="students">{{ __('CRUD') }}</a>
+                                    <a class="nav-link" href="http://127.0.0.1:8000/students">{{ __('CRUD') }}</a>
+                            </li>
+
+                            <li class="nav-item">
+                                    <a class="nav-link" href="http://127.0.0.1:8000/users">{{ __('USER DATA') }}</a>
                             </li>
 
                             <li class="nav-item dropdown">
