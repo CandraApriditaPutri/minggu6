@@ -21,6 +21,7 @@
                         <tr><th>Name</th><th>:</th><td>{{ $user->name }}</td></tr>
                         <tr><th>Email</th><th>:</th><td>{{ $user->email }}</td></tr>
                         <tr><th>Password</th><th>:</th><td>{{ $user->password }}</td></tr>
+                        <tr><th>Created At</th><th>:</th><td>{{ $user->created_at }}</td></tr>
                     </table>
                     </form>
                 </div>

@@ -21,6 +21,7 @@
                         <tr><th>Name</th><th>:</th><td>{{ $student->name }}</td></tr>
                         <tr><th>Department</th><th>:</th><td>{{ $student->department }}</td></tr>
                         <tr><th>Phone Number</th><th>:</th><td>{{ $student->phone_number }}</td></tr>
+                        <tr><th>Created At</th><th>:</th><td>{{ $student->created_at }}</td></tr>
                     </table>
                     </form>
                 </div>
