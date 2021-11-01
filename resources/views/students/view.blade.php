@@ -14,6 +14,7 @@
                         </div>
                     @endif
 
+                    <img width="150px" src="{{asset('storage/'.$student->photo)}}">
                     <form action="/students/{{$student->id}}" method="post">
                     <table class="table table-responsive">
                         <tr><th>ID</th><th>:</th><td>{{ $student->id }}</td></tr>
