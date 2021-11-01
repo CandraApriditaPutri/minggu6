@@ -33,3 +33,6 @@ Route::resource('users', UserController::class);
 
 //Route search User
 Route::get('/search', [UserController::class, 'search'])->name('search');
+
+//Route untuk menapilkan nilai
+Route::get('students/{id}/detail', [StudentController::class, 'detail']);
