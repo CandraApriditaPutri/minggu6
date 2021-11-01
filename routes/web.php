@@ -26,7 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('students', StudentController::class);
 
 //Route search Student
-Route::get('/search', [StudentController::class, 'search'])->name('search');
+Route::get('/search_student', [StudentController::class, 'search_student'])->name('search_student');
 
 //Route user
 Route::resource('users', UserController::class);

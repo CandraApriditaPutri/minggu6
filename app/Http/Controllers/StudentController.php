@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Kelas;
+use App\Models\Course;
 
 class StudentController extends Controller
 {
@@ -111,7 +112,7 @@ class StudentController extends Controller
         $student->delete();
         return redirect()->route('students.index');
     }
-    public function search(Request $request)
+    public function search_student(Request $request)
     {
         $keyword = $request->search;
         $student = student::where('name', 'like', "%" . $keyword . "%")->paginate(5);
