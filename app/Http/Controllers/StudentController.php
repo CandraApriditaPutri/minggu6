@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Kelas;
 use App\Models\Course;
+use PDF;
 
 class StudentController extends Controller
 {
@@ -127,6 +128,7 @@ class StudentController extends Controller
         $student->delete();
         return redirect()->route('students.index');
     }
+    
     public function search_student(Request $request)
     {
         $keyword = $request->search;
@@ -139,4 +141,11 @@ class StudentController extends Controller
         $student = Student::find($id);
         return view('students.detail', ['student'=>$student]);
     }
+
+    public function report($id)
+    {
+        $student = Student::find($id);
+        $pdf = PDF::loadview('students.report',['student'=>$student]);
+        return $pdf->stream();
+    }      
 }

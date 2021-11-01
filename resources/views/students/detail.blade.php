@@ -21,7 +21,7 @@
                                 <th> Score </th>
                             </tr>
                         </thead>
-                        </tbody>
+                        <tbody>
                         @foreach ($student->courses as $sc)
                             <tr>
                                 <td> {{ $sc->course_name }} </td>
@@ -32,6 +32,7 @@
                         @endforeach
                         </tbody>
                     </table>
+                    <a href="/students/{{$student->id}}/report" class="btn btn-primary" target="_blank">PRINT PDF</a>
                 </div>
             </div>
         </div>

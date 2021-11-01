@@ -36,3 +36,6 @@ Route::get('/search', [UserController::class, 'search'])->name('search');
 
 //Route untuk menapilkan nilai
 Route::get('students/{id}/detail', [StudentController::class, 'detail']);
+
+//Route untuk menjalankan fungsi PDF
+Route::get('/students/{id}/report', [StudentController::class, 'report']);
