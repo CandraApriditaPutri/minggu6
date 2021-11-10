@@ -59,11 +59,13 @@
                             @endif
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="http://127.0.0.1:8000/students">{{ __('CRUD') }}</a>
+                                    <a class="nav-link" href="{{ route('students.index') }}">{{ __('CRUD') }}</a>
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="http://127.0.0.1:8000/users">{{ __('USER DATA') }}</a>
+                                @can('manage-users')
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('USER DATA') }}</a>
+                                @endcan
                             </li>
 
                             <li class="nav-item dropdown">
